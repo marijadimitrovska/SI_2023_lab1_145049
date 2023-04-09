@@ -1,0 +1,242 @@
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop
+$ mkdir SI_2023_lab1_145049
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop
+$ cd SI_2023_lab1_145049
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049
+$ git init
+Initialized empty Git repository in C:/Users/User/Desktop/SI_2023_lab1_145049/.git/
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git remote add origin https://github.com/marijadimitrovska/SI_2023_lab1_145049.git
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ echo "Marija Dimitrovska 145049" > README.md
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 6a19d3a] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ code .
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git commit -m "Add java class"
+[master 6836b67] Add java class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1.java
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git push -u origin --all
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 841 bytes | 841.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/marijadimitrovska/SI_2023_lab1_145049.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git branch "bug1"
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git branch bug2
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git branch bug3
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug1)
+$ git add SILab1.java
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug1)
+$ git commit -m "Fix wrong loop for reading"
+[bug1 b49e3e9] Fix wrong loop for reading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug2)
+$ git add SILab1.java
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug2)
+$ git commit -m "Fix wrong condition in filterOddNumbers"
+[bug2 97a7958] Fix wrong condition in filterOddNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug2)
+$ git checkout bug3
+Switched to branch 'bug3'
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug3)
+$ git add SILab1.java
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug3)
+$ git commit -m "Fix method sumEvenNumbers"
+[bug3 2286eb4] Fix method sumEvenNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug3)
+$ git push -u origin --all
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 825 bytes | 825.00 KiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 1 local object.
+To https://github.com/marijadimitrovska/SI_2023_lab1_145049.git
+ * [new branch]      bug1 -> bug1
+ * [new branch]      bug2 -> bug2
+ * [new branch]      bug3 -> bug3
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Branch 'bug1' set up to track remote branch 'bug1' from 'origin'.
+Branch 'bug2' set up to track remote branch 'bug2' from 'origin'.
+Branch 'bug3' set up to track remote branch 'bug3' from 'origin'.
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug3)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git merge bug1
+Updating 6836b67..b49e3e9
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git push --all
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/marijadimitrovska/SI_2023_lab1_145049.git
+   6836b67..b49e3e9  master -> master
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git merge bug2
+Auto-merging SILab1.java
+Merge made by the 'recursive' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git merge bug2
+Already up to date.
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git push --all
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 360.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/marijadimitrovska/SI_2023_lab1_145049.git
+   b49e3e9..02231a1  master -> master
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git checkout bug3
+Switched to branch 'bug3'
+Your branch is up to date with 'origin/bug3'.
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug3)
+$ git rebase master
+Successfully rebased and updated refs/heads/bug3.
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (bug3)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git merge bug3
+Updating 02231a1..99c7ef8
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git push --all --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/marijadimitrovska/SI_2023_lab1_145049.git
+ + 2286eb4...99c7ef8 bug3 -> bug3 (forced update)
+   02231a1..99c7ef8  master -> master
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git add logs.txt
+fatal: pathspec 'logs.txt' did not match any files
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ ^C
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git add logs.txt
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)
+$ git log
+commit 99c7ef8ed737896b547c66133f51a4e1c88b16f6 (HEAD -> master, origin/master, origin/bug3, bug3)
+Author: Marija Dimitrovska <dimitrovska23@gmail.com>
+Date:   Sun Apr 9 21:57:12 2023 +0200
+
+    Fix method sumEvenNumbers
+
+commit 02231a1de8d32b873b19a36e827b2ca95b0cb813
+Merge: b49e3e9 97a7958
+Author: Marija Dimitrovska <dimitrovska23@gmail.com>
+Date:   Sun Apr 9 22:00:11 2023 +0200
+
+    Merge branch 'bug2'
+
+commit 97a7958c8f660a40ca8e4d0c252b1e187630c517 (origin/bug2, bug2)
+Author: Marija Dimitrovska <dimitrovska23@gmail.com>
+Date:   Sun Apr 9 21:55:05 2023 +0200
+
+    Fix wrong condition in filterOddNumbers
+
+commit b49e3e9725069ef4312fbddc5f4c45b364bbb982 (origin/bug1, bug1)
+Author: Marija Dimitrovska <dimitrovska23@gmail.com>
+Date:   Sun Apr 9 21:52:26 2023 +0200
+
+    Fix wrong loop for reading
+
+commit 6836b67d4e87dccc64ea697eb0732d568afd0b98
+Author: Marija Dimitrovska <dimitrovska23@gmail.com>
+Date:   Sun Apr 9 21:43:29 2023 +0200
+
+    Add java class
+
+commit 6a19d3a5173698f9bd6b5c66e028cf2158376343
+Author: Marija Dimitrovska <dimitrovska23@gmail.com>
+Date:   Sun Apr 9 21:40:49 2023 +0200
+
+    Initial commit
+
+User@DESKTOP-CQ1N830 MINGW64 ~/Desktop/SI_2023_lab1_145049 (master)

@@ -1,0 +1,37 @@
+Create a new repository on GitHub: This is done manually through the GitHub website.
+main into master
+mkdir SI_2023_lab1_145049 - make local directorium 
+cd SI_2023_lab1_145049 - changed directorium 
+git init Initialized empty Git repository 
+git remote add origin https://github.com/marijadimitrovska/SI_2023_lab1_145049.git - sync local and remote reposiroty
+echo "Marija Dimitrovska 145049" > README.md - added readme text
+git add README.md - staged changes of README.md
+git commit -m "Initial commit" - commited initial changes
+added file SILab1
+git commit -m "Add java class" - commited SILab1
+git push -u origin --all - sync all changes
+git branch "bug1" - Created a new branch called bug1
+git branch "bug2" - Created a new branch called bug2
+git branch "bug3" - Created a new branch called bug3
+git checkout bug1 - switch to bug1 branch
+git add SILab1.java - added file SILab1.java
+git commit -m "Fix wrong loop for reading" - commited changes from bug1
+git checkout bug2 - switch to bug2 branch
+git commit -m "Fix wrong condition in filterOddNumbers" - commited changes from bug2
+git checkout bug3 - switch to bug3 branch
+git commit -m "Fix method sumEvenNumbers" - commited changes from bug3
+ git push -u origin --all - sync all branches into master
+ git checkout master - switch to master branch
+ git merge bug1 - bug1 merged into master
+ git push --all - sync all into master
+ git merge bug2 - bug2 merged into master
+ git push --all - sync all into master
+git checkout bug3 - switch to bug3 branch
+git rebase master - This command rebases the current branch (bug3) onto the master branch. It replays the commits from the bug3 branch on top of the current state of the master branch.
+git checkout master - switch to master branch
+git merge bug3 - bug3 merged into master
+git push --all --force - This command updates the local repository with any changes that have been made to the remote repository. The --force flag is used for the bug3 branch to overwrite any local changes.
+git add logs.txt - added logs.txt
+git add 145049.txt - added 145049.txt
+git log - lists of all logs (commands)
+git commit -m "Final commit" - final commit 
